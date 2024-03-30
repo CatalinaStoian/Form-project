@@ -24,45 +24,13 @@ let card = [emailInput, firstNameInput, lastNameInput, locationInput, phoneInput
 
 let showCard = () => {
     let userCard = document.querySelector('.user-card');
-    let fieldsCompleted = 0;
-
-    if (emailInput.value.trim() !== "") {
-        userEmail.textContent = emailInput.value.trim();
-        fieldsCompleted++;
+    if(card.length > 1){
+        userCard.style.display = 'flex';
     }
 
-    if (firstNameInput.value.trim() !== "") {
-        userFirstName.textContent = firstNameInput.value.trim();
-        fieldsCompleted++;
-    }
 
-    if (lastNameInput.value.trim() !== "") {
-        userLastName.textContent = lastNameInput.value.trim();
-        fieldsCompleted++;
-    }
-
-    if (locationInput.value.trim() !== "") {
-        userLocation.textContent = locationInput.value.trim();
-        imgLocation.style.display = 'block';
-        fieldsCompleted++;
-    }
-
-    if (phoneInput.value.trim() !== "") {
-        userPhone.textContent = phoneInput.value.trim();
-        imgPhone.style.display = 'block';
-        fieldsCompleted++;
-    }
-
-    if (linkedinInput.value.trim() !== "") {
-        userLinkedin.textContent = linkedinInput.value.trim();
-        fieldsCompleted++;
-    }
-
-    if (fieldsCompleted > 1) {
-        // userCard.style.display = 'flex';
-        console.log('test')
-    }
 }
+
 
 let updateUserEmail = () => {
     userEmail.innerText = emailInput.value;
